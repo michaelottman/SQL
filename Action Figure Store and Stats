@@ -1,0 +1,32 @@
+--create a store database for action figures
+CREATE TABLE actionfigures (id INTEGER PRIMARY KEY, name TEXT, movie TEXT, quantity INTEGER, quality_rating INTEGER, price INTEGER);
+
+INSERT INTO actionfigures VALUES 
+(1, "Luke Skywalker", "A New Hope", 12, 8, 23),
+(2, "Han Solo", "A New Hope", 8, 9, 34),
+(3, "Princess Leia", "Empire Strikes Back", 5, 9, 18),
+(4, "Darth Vader", "A New Hope", 14, 9, 27),
+(5, "Obi Wan Kenobi", "A New Hope", 6, 8, 15),
+(6, "Death Star Commander", "A New Hope", 4, 7, 12),
+(7, "Hoth Trooper", "Empire Strikes Back", 5, 8, 12),
+(8, "R2-D2", "Empire Strikes Back", 7, 8, 19),
+(9, "C3-PO", "Return of The Jedi", 8, 9, 23),
+(10, "Endor Rebel Soldier", "Return of The Jedi", 11, 9, 18),
+(11, "Wicket the Ewok", "Return of The Jedi", 4, 9, 12),
+(12, "Greedo", "A New Hope", 8, 9, 25),
+(13, "C3-PO", "A New Hope", 3, 10, 23),
+(14, "R2-D2 w lightsaber", "Return of The Jedi", 14, 8, 34),
+(15, "Luke Skywalker Endor", "Return of The Jedi", 6, 9, 28),
+(16, "Princess Leia Hoth", "Empire Strikes Back", 7, 8, 16);
+
+--display the store database
+SELECT * FROM actionfigures;
+
+--display the database ordered by price
+SELECT * FROM actionfigures ORDER BY price;
+
+--display how many action figures are in the store
+SELECT SUM(quantity) FROM actionfigures;
+
+
+
